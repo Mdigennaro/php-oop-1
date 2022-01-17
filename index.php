@@ -10,9 +10,10 @@ class Movie {
   public $voto = '';
 
   //Costruttore
-  function __construct($_titolo)
+  function __construct($_titolo, $_genere)
   {
     $this->titolo = $_titolo;
+    $this->genere = $_genere;
   }
 
   //metodi
@@ -35,19 +36,18 @@ class Movie {
 }
 
 //Variabili d'istanza
-$avatar = new Movie("Avatar");
-$avatar->genere = "Sci-fi/Azione";
+$avatar = new Movie("Avatar", "Sci-fi/Azione");
 $avatar->durata = 162;
 $avatar->anno = 2009;
 $avatar->setVoto(4.5);
 
-$interstellar = new Movie("Interstellar");
-$interstellar->genere = "Sci-fi/Avventura";
+$interstellar = new Movie("Interstellar", "Sci-fi/Avventura");
 $interstellar->durata = 169;
 $interstellar->anno = 2014;
 $interstellar->setVoto(3.5);
 
 var_dump($avatar);
 var_dump($interstellar);
+
 
 ?>
